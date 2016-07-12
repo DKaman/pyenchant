@@ -174,7 +174,7 @@ class CmdLineChecker:
 
     def read_command(self):
         try:
-            cmd = raw_input(">> ") # Python 2.x
+            cmd = input(">> ") # Python 2.x
         except NameError:
             cmd = input(">> ") # Python 3.x
         cmd = cmd.strip()
@@ -213,7 +213,7 @@ class CmdLineChecker:
             return True
 
         if cmd == "e":
-            repl = raw_input(info("New Word: "))
+            repl = input(info("New Word: "))
             self.error.replace(repl.strip())
             return True
 
